@@ -85,3 +85,39 @@ img {
         background-position: top right, bottom -15px left;
     }
 }
+.section {
+    border: 1px solid black;
+}
+// LAYOUT
+.container {
+    max-width: 960px;
+    width: calc(100% - 2rem);
+    margin-left: auto;
+    margin-right: auto;
+}
+.flex {
+    display: flex;
+    align-items: center;
+}
+// HEADER
+.header {
+    text-align: center;
+    padding-top: var(--mb-6);
+    &__title {
+        margin-bottom: var(--mb-3);
+    }
+    &__data {
+        justify-content: center;
+        margin-bottom: var(--mb-5);
+        &-icon {
+            font-size: 4rem;
+            color: hsl(237, 63%, 64%);
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
+        }
+        &-annually,
+        &-monthly {
+            color: var(--frist-color-alt);
+        }
+    }
+}

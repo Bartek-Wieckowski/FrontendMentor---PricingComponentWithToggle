@@ -81,4 +81,51 @@ img {
     background-position: top right, bottom -15px left;
   }
 }
+
+.section {
+  border: 1px solid black;
+}
+
+.container {
+  max-width: 960px;
+  width: calc(100% - 2rem);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header {
+  text-align: center;
+  padding-top: var(--mb-6);
+}
+
+.header__title {
+  margin-bottom: var(--mb-3);
+}
+
+.header__data {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: var(--mb-5);
+}
+
+.header__data-icon {
+  font-size: 4rem;
+  color: #696fdd;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.header__data-annually, .header__data-monthly {
+  color: var(--frist-color-alt);
+}
 /*# sourceMappingURL=style.css.map */
