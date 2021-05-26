@@ -137,6 +137,8 @@ img {
   border-radius: 15px;
   color: var(--title-color);
   padding: 0 3rem;
+  -webkit-box-shadow: -1px -1px 10px #777676;
+          box-shadow: -1px -1px 10px #777676;
 }
 
 .card__second {
@@ -190,7 +192,7 @@ img {
   background: var(--primary-color);
   color: var(--frist-color);
   border-radius: 5px;
-  border: none;
+  border: 0.5px solid transparent;
   font-weight: var(--font-bold);
   letter-spacing: 1px;
   -webkit-transition: 0.8s ease-in-out;
@@ -200,7 +202,7 @@ img {
 .button:hover {
   background: transparent;
   color: #696fdd;
-  border: 1px solid #696fdd;
+  border: 0.5px solid #696fdd;
 }
 
 .button-alt {
@@ -211,6 +213,55 @@ img {
 .button-alt:hover {
   background: transparent;
   color: var(--frist-color);
-  border: 1px solid var(--frist-color);
+  border: 0.5px solid var(--frist-color);
+}
+
+@media screen and (max-width: 374px) {
+  .container {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 568px) {
+  .section__container {
+    display: -ms-grid;
+    display: grid;
+    gap: 1.5rem;
+    -ms-grid-columns: (minmax(320px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .section__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: unset;
+    -ms-grid-columns: unset;
+        grid-template-columns: unset;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container {
+    max-width: 1440px;
+  }
+  .card__second {
+    height: 500px;
+  }
+  .card__title {
+    -ms-flex-item-align: baseline;
+        align-self: baseline;
+  }
+  .button-alt {
+    height: 40px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
