@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+:root {
+    // colors
+    --frist-color: hsl(240, 78%, 98%);
+    --frist-color-alt: hsl(234, 14%, 74%);
+    --primary-color: hsl(236, 72%, 79%) to hsl(237, 63%, 64%);
+    --price-color: hsl(232, 13%, 33%);
+    --title-color: hsl(233, 13%, 49%);
+
+    //font and typography
+
+    --body-font: "Montserrat", sans-serif;
+
+    --biggest-font-size: 2rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+
+    @media screen and (min-width: 968px) {
+        --biggest-font-size: 3rem;
+        --h2-font-size: 1.75rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: 0.875rem;
+    }
+
+    //font weight
+
+    --font-bold: 700;
+
+    //Margin
+    --mb-1: 0.5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem;
+}
+/* /BASE / */
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: var(--header-height) 0 0 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--first-color);
+    color: #000;
+    line-height: 1.6;
+}
+h1,
+h2,
+h3,
+span,
+p {
+    margin: 0;
+}
+h1,
+h2,
+h3 {
+    font-weight: var(--font-bold);
+    color: var(--title-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
