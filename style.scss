@@ -72,3 +72,16 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+// CSS CLASS
+.main {
+    width: 100%;
+    height: 100vh;
+    background-image: url(/images/bg-top.svg);
+    background-repeat: no-repeat;
+    background-position: top right -190px;
+    @media screen and (min-width: 768px) {
+        background-image: url(/images/bg-top.svg), url(/images/bg-bottom.svg);
+        background-position: top right, bottom -15px left;
+    }
+}
