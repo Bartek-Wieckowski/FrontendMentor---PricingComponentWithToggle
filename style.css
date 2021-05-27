@@ -30,7 +30,7 @@
   }
 }
 
-/* /BASE / */
+/* /BASIC / */
 *,
 ::before,
 ::after {
@@ -39,7 +39,7 @@
 }
 
 body {
-  margin: var(--header-height) 0 0 0;
+  margin: 0 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--first-color);
@@ -271,15 +271,13 @@ img {
 }
 
 @media screen and (max-width: 374px) {
-  .container {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .button {
-    margin: 0 auto 2rem;
-    width: 50%;
-    text-align: center;
+  .card {
+    -ms-grid-columns: max-content;
+        grid-template-columns: -webkit-max-content;
+        grid-template-columns: max-content;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 

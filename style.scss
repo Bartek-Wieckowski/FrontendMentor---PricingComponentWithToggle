@@ -38,7 +38,7 @@
     --mb-5: 2.5rem;
     --mb-6: 3rem;
 }
-/* /BASE / */
+/* /BASIC / */
 
 *,
 ::before,
@@ -47,7 +47,7 @@
 }
 
 body {
-    margin: var(--header-height) 0 0 0;
+    margin: 0 0 0 0;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     background-color: var(--first-color);
@@ -99,6 +99,7 @@ img {
 .grid {
     display: grid;
 }
+
 // HEADER
 .header {
     text-align: center;
@@ -118,6 +119,8 @@ img {
         }
     }
 }
+
+// TOGGLE
 .toggle-container {
     display: flex;
     justify-content: center;
@@ -152,6 +155,7 @@ img {
         z-index: 2;
     }
 }
+
 .toggle-container input:checked + label + .active-circle {
     transform: translate(-50%, -50%) scale(15);
 }
@@ -159,7 +163,7 @@ img {
     transform: translateX(calc(100% + 0.5px));
 }
 
-//CARD
+//CARDS
 .card {
     min-height: 300px;
     text-align: center;
@@ -208,6 +212,8 @@ img {
 .hidden {
     display: none;
 }
+
+// BUTTONS
 .button {
     margin-bottom: var(--mb-5);
     padding: 0.7rem 4rem;
@@ -236,30 +242,29 @@ img {
         }
     }
 }
+
+// MEDIA QUERIES
+
+// SMALL
 @media screen and (max-width: 374px) {
-    .container {
-        display: block;
-        margin: 0 auto;
-        text-align: center;
-    }
-    .button {
-        margin: 0 auto 2rem;
-        width: 50%;
-        text-align: center;
+    .card {
+        grid-template-columns: max-content;
+        justify-content: center;
     }
 }
 
+// MEDIUM
 @media screen and (min-width: 568px) {
     .section {
         &__container {
             display: grid;
-
             gap: 1.5rem;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         }
     }
 }
 
+// LARGE
 @media screen and (min-width: 1024px) {
     .section {
         &__container {
