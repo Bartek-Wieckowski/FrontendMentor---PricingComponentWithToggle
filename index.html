@@ -35,7 +35,10 @@
         <h1 class="header__title">Our Pricing</h1>
         <div class="header__data flex">
           <span class="header__data-annually">Annually</span>
-          <i class='bx bxs-toggle-left header__data-icon'></i>
+          <div class="toggle-container">
+            <input type="checkbox" id="toggle" />
+            <label for="toggle"></label>
+          </div>
           <span class="header__data-monthly">Monthly</span>
         </div>
       </header>
@@ -47,7 +50,7 @@
             <div class="price price__container flex">
               <span class="price__dollar">&dollar;</span>
               <span class="price__month hidden">19.99</span>
-              <span class="price__month ">199.99</span>
+              <span class="price__year">199.99</span>
             </div>
             <p class="line line--1">500 GB Storage</p>
             <p class="line line--2">2 Users Allowed</p>
@@ -61,7 +64,7 @@
             <div class="price price__container price__container--second flex">
               <span class="price__dollar">&dollar;</span>
               <span class="price__month hidden">24.99</span>
-              <span class="price__month ">249.99</span>
+              <span class="price__year">249.99</span>
             </div>
             <p class="line line--1">1 TB Storage</p>
             <p class="line line--2">5 Users Allowed</p>
@@ -71,10 +74,10 @@
           </article>
           <article class="card card__third grid">
             <h2 class="card__title">Master</h2>
-            <div class="price__container flex">
+            <div class="price price__container flex">
               <span class="price__dollar">&dollar;</span>
               <span class="price__month hidden">39.99</span>
-              <span class="price__month ">399.99</span>
+              <span class="price__year">399.99</span>
             </div>
             <p class="line line--1">2 TB Storage</p>
             <p class="line line--2">10 Users Allowed</p>
@@ -84,12 +87,13 @@
         </div>
       </section>
     </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">theBart</a>.
+    </div>
   </main>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">theBart</a>.
-  </div>
+  <script src="main.js"></script>
 </body>
 
 </html>

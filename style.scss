@@ -109,18 +109,56 @@ img {
     &__data {
         justify-content: center;
         margin-bottom: var(--mb-5);
-        &-icon {
-            font-size: 4rem;
-            color: hsl(237, 63%, 64%);
-            margin-left: 1.5rem;
-            margin-right: 1.5rem;
-        }
+
         &-annually,
         &-monthly {
             color: var(--frist-color-alt);
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
         }
     }
 }
+.toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & label {
+        background: var(--primary-color);
+        border: 1px solid #fff;
+        border-radius: 20px;
+        display: inline-block;
+        position: relative;
+        transition: all 0.3s ease-out;
+        width: 45px;
+        height: 25px;
+        z-index: 2;
+        &::after {
+            content: "";
+            background-color: #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: 1.5px;
+            left: 1px;
+            transform: translateX(0);
+            transition: transform 0.3s linear;
+            width: 20px;
+            height: 20px;
+            z-index: 3;
+        }
+    }
+    & input {
+        visibility: hidden;
+        position: absolute;
+        z-index: 2;
+    }
+}
+.toggle-container input:checked + label + .active-circle {
+    transform: translate(-50%, -50%) scale(15);
+}
+.toggle-container input:checked + label::after {
+    transform: translateX(calc(100% + 0.5px));
+}
+
 //CARD
 .card {
     min-height: 300px;
@@ -148,7 +186,8 @@ img {
     &__container {
         justify-content: center;
     }
-    &__month {
+    &__month,
+    &__year {
         font-size: 4rem;
     }
     &__dollar {
@@ -203,12 +242,18 @@ img {
         margin: 0 auto;
         text-align: center;
     }
+    .button {
+        margin: 0 auto 2rem;
+        width: 50%;
+        text-align: center;
+    }
 }
 
 @media screen and (min-width: 568px) {
     .section {
         &__container {
             display: grid;
+
             gap: 1.5rem;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         }
@@ -230,6 +275,7 @@ img {
         max-width: 1440px;
     }
     .card {
+        width: 400px;
         &__second {
             height: 500px;
         }
