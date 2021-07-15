@@ -77,11 +77,11 @@ img {
 .main {
     padding-bottom: 5rem;
     width: 100%;
-    background-image: url(/images/bg-top.svg);
+    background-image: url(images/bg-top.svg);
     background-repeat: no-repeat;
     background-position: top right -190px;
     @media screen and (min-width: 768px) {
-        background-image: url(/images/bg-top.svg), url(/images/bg-bottom.svg);
+        background-image: url(images/bg-top.svg), url(images/bg-bottom.svg);
         background-position: top right, bottom -15px left;
     }
 }
